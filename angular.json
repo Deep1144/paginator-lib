@@ -123,6 +123,46 @@
           }
         }
       }
+    },
+    "de-paginator": {
+      "projectType": "library",
+      "root": "projects/de-paginator",
+      "sourceRoot": "projects/de-paginator/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/de-paginator/tsconfig.lib.json",
+            "project": "projects/de-paginator/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/de-paginator/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/de-paginator/src/test.ts",
+            "tsConfig": "projects/de-paginator/tsconfig.spec.json",
+            "karmaConfig": "projects/de-paginator/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/de-paginator/tsconfig.lib.json",
+              "projects/de-paginator/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "paginator-lib"
 }

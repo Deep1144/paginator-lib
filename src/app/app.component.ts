@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'paginator-lib';
+  selectedPage ;
+  pageSelect(e){
+    this.selectedPage =e;
+    // console.log(e);
+    // alert("page selected : " ,e);
+  }
 }

@@ -15,6 +15,12 @@
     },
     {
       "path": "./e2e/tsconfig.json"
+    },
+    {
+      "path": "./projects/de-paginator/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/de-paginator/tsconfig.spec.json"
     }
 ]
 }
